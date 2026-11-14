@@ -1,8 +1,8 @@
-// Four-page invitation. Original loader and decorative styling are preserved.
+// Five-page invitation. Original loader and decorative styling are preserved.
 const body = document.body;
 const loader = document.getElementById('loader');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const screens = ['welcome', 'family', 'invitation', 'venue'];
+const screens = ['welcome', 'family', 'invitation', 'venue', 'farewell'];
 let currentScreen = 'welcome';
 
 function showScreen(id) {
