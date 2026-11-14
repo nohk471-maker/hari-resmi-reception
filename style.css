@@ -1159,3 +1159,12 @@ html, body { scroll-behavior:auto; }
   .page::before { width: 48vw !important; height: 49vw !important; }
   .page::after { width: 48vw !important; height: 48vw !important; }
 }
+
+
+/* Explicit floating lavender corners: independent of page transitions and stacking. */
+.floral-corner { position: fixed !important; display: block !important; visibility: visible !important; opacity: 1 !important; pointer-events: none !important; z-index: 2147483000 !important; object-fit: contain !important; filter: none !important; transform: none !important; }
+.floral-corner--top { top: 0 !important; left: 0 !important; width: min(28vw, 380px) !important; height: auto !important; }
+.floral-corner--bottom { bottom: 0 !important; right: 0 !important; width: min(29vw, 390px) !important; height: auto !important; }
+@media(max-width: 600px) { .floral-corner--top {width: 39vw !important;} .floral-corner--bottom {width: 40vw !important;} }
+/* Suppress earlier pseudo-element floral layers so flowers do not double up. */
+.page::before,.page::after,.landing::before,.landing::after,.invitation::before,.invitation::after,.story-screen::before,.story-screen::after {background-image:none !important;}
