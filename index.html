@@ -74,6 +74,22 @@
   />
 
   <link rel="stylesheet" href="style.css?v=lavender-corners-v5" />
+
+<style id="hari-lavender-corners-self-contained">
+  html body > img.floral-corner {
+    position: fixed !important; display: block !important; visibility: visible !important;
+    opacity: 1 !important; z-index: 2147483000 !important;
+    pointer-events: none !important; object-fit: contain !important;
+    margin: 0 !important; padding: 0 !important; max-width: none !important;
+    transform: none !important; filter: none !important;
+  }
+  html body > img.floral-corner--top { top: 0 !important; left: 0 !important; right: auto !important; bottom: auto !important; width: min(30vw, 380px) !important; height: auto !important; }
+  html body > img.floral-corner--bottom { bottom: 0 !important; right: 0 !important; top: auto !important; left: auto !important; width: min(31vw, 400px) !important; height: auto !important; }
+  @media (max-width: 600px) {
+    html body > img.floral-corner--top { width: 38vw !important; }
+    html body > img.floral-corner--bottom { width: 39vw !important; }
+  }
+</style>
 </head>
   <body>
     <!-- Lavender flowers deliberately outside .page so navigation never hides them -->
