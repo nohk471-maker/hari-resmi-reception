@@ -1075,3 +1075,60 @@ html, body { scroll-behavior:auto; }
 /* Center the welcome page */
 .page > .landing.is-current {display:flex !important;flex-direction:column;justify-content:center;align-items:center;width:100%;min-height:100svh;text-align:center;}
 .landing__inner {width:100%;max-width:770px;margin:0 auto;text-align:center;}
+
+/* Restore original lavender corner flowers on all invitation pages. */
+.page > .story-screen.is-current,
+.page > .invitation.is-current {
+  position: relative;
+  isolation: isolate;
+}
+.page > .story-screen::before,
+.page > .story-screen::after,
+.page > .invitation::before,
+.page > .invitation::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.9;
+}
+.page > .story-screen::before,
+.page > .invitation::before {
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  width: min(26vw, 420px);
+  height: min(26vw, 420px);
+  background-image: url("assets/floral/floral-top-left.png");
+}
+.page > .story-screen::after,
+.page > .invitation::after {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  width: min(28vw, 460px);
+  height: min(28vw, 460px);
+  background-image: url("assets/floral/floral-bottom-right.png");
+}
+.page > .story-screen .story-card,
+.page > .invitation .invitation__card {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .page > .story-screen::before,
+  .page > .invitation::before {
+    width: 42vw;
+    height: 42vw;
+  }
+  .page > .story-screen::after,
+  .page > .invitation::after {
+    width: 44vw;
+    height: 44vw;
+  }
+}
